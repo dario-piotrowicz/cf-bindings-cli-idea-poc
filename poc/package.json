@@ -2,9 +2,11 @@
 	"name": "poc",
 	"type": "module",
 	"bin": "./dist/cli.js",
+	"main": "./dist/api.js",
 	"scripts": {
 		"build": "esbuild --platform=node ./src/* --outdir=./dist",
-		"build:watch": "npm run build -- --watch=forever"
+		"build:watch": "npm run build -- --watch=forever",
+		"build:types": "tsc --emitDeclarationOnly --outDir ./dist"
 	},
 	"dependencies": {
 		"ts-node": "^10.9.1",
@@ -15,6 +17,7 @@
 	"devDependencies": {
 		"@tsconfig/strictest": "^2.0.0",
 		"@types/node": "^20.4.2",
-		"esbuild": "0.19.8"
+		"esbuild": "0.19.8",
+		"@cloudflare/workers-types": "^4.20231121.0"
 	}
 }
