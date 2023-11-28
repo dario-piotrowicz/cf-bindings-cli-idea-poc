@@ -28,24 +28,22 @@ if(command === 'build') {
 
         writeFileSync(outputEntrypoint,
             `
-            import {
-                onRequestDelete as originalOnRequestDelete,
-                onRequestGet as originalOnRequestGet,
-                onRequestHead as originalOnRequestHead,
-                onRequestPatch as originalOnRequestPatch,
-                onRequestPost as originalOnRequestPost
-            } from './__poc_index.js';
+            import * as original from './__poc_index.js';
     
-            export const onRequestDelete = originalOnRequestDelete;
-            export const onRequestHead = originalOnRequestHead;
-            export const onRequestPatch = originalOnRequestPatch;
-            export const onRequestPost = originalOnRequestPost;
+            export const onRequestDelete = original.onRequestDelete ?? undefined;
+            export const onRequestHead = original.onRequestHead ?? undefined;
+            export const onRequestPatch = original.onRequestPatch ?? undefined;
+            export const onRequestPost = original.onRequestPost ?? undefined;
 
             export const onRequestGet = async ({ request, next, env }) => {
                 const reqCtxSymbol = Symbol.for('__poc_request_context');
                 const ctx = {};
                 globalThis[reqCtxSymbol] = { req: request, env, ctx };
-                return originalOnRequestGet({ request, next, env });
+                if(original.onRequestGet) {
+                    return original.onRequestGet({ request, next, env });
+                } else {
+                    return original.onRequest({ request, next, env });
+                }
             };
             `
         );
