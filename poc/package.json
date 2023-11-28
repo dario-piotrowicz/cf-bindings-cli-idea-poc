@@ -3,6 +3,7 @@
 	"type": "module",
 	"bin": "./dist/cli.js",
 	"main": "./dist/api.js",
+	"types": "./dist/api.dev.d.ts",
 	"exports": {
 		".": {
 			"production": "./dist/api.prod.js",
