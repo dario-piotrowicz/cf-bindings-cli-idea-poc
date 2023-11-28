@@ -2265,14 +2265,12 @@ function StartServer({
   });
 }
 
-const reqCtxSymbol$1 = Symbol.for("__poc_request_context");
-globalThis[reqCtxSymbol$1] = null;
-function _getRequestContext() {
-  return globalThis[reqCtxSymbol$1];
-}
-
 const reqCtxSymbol = Symbol.for("__poc_request_context");
 globalThis[reqCtxSymbol] = null;
+function _getRequestContext() {
+  return globalThis[reqCtxSymbol];
+}
+
 async function getRequestContext() {
   const reqCtx = _getRequestContext();
   return reqCtx;
