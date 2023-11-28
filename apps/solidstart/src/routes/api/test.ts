@@ -3,7 +3,9 @@ import { getRequestContext } from 'poc';
 
 export async function GET() {
   const { env } = await getRequestContext();
-  return json({ kv: await env.MY_KV.get("TEST_KEY") });
+  const numOfKeys = (await env.MY_KV.list()).keys.length;
+
+  return json({ numOfKeys });
 }
 
 export async function POST() {

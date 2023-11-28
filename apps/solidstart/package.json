@@ -1,11 +1,12 @@
 {
   "name": "solidstart",
   "scripts": {
-    "build": "poc build solid:build",
+    "build": "poc build solid:build functions/[[path]].js",
     "dev": "solid-start dev",
     "solid:build": "solid-start build",
     "start": "solid-start start",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-11-21 --proxy 3000 -- npm run dev",
+    "pages:preview": "wrangler pages dev ./dist/public --kv MY_KV",
     "pages:deploy": "npm run build && wrangler pages deploy ./dist/public"
   },
   "type": "module",

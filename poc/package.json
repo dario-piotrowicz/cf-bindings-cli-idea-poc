@@ -3,6 +3,12 @@
 	"type": "module",
 	"bin": "./dist/cli.js",
 	"main": "./dist/api.js",
+	"exports": {
+		".": {
+			"production": "./dist/api.prod.js",
+			"development": "./dist/api.dev.js"
+		}
+	},
 	"scripts": {
 		"build": "esbuild --platform=node ./src/* --outdir=./dist",
 		"build:watch": "npm run build -- --watch=forever",
