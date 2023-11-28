@@ -3,13 +3,14 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "build": "poc build svelte:build",
+    "build": "poc build astro:build dist/_worker.js",
     "dev": "astro dev",
     "start": "astro dev",
     "astro:build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-11-21 -- astro dev",
+    "pages:preview": "wrangler pages dev ./dist --kv MY_KV",
     "pages:deploy": "astro build && wrangler pages deploy ./dist"
   },
   "dependencies": {
