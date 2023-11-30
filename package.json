@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:poc": "pnpm --filter poc build:full",
+    "postinstall": "pnpm build:poc"
   },
   "keywords": [],
   "author": "",

@@ -14,7 +14,8 @@
 	"scripts": {
 		"build": "esbuild --platform=node ./src/* --outdir=./dist",
 		"build:watch": "npm run build -- --watch=forever",
-		"build:types": "tsc --emitDeclarationOnly --outDir ./dist"
+		"build:types": "tsc --emitDeclarationOnly --outDir ./dist",
+		"build:full": "pnpm build && pnpm build:types"
 	},
 	"dependencies": {
 		"ts-node": "^10.9.1",
