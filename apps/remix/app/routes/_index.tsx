@@ -1,4 +1,4 @@
-import { json, type MetaFunction } from "@remix-run/cloudflare";
+import { type MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import { getRequestContext } from 'poc';
 
