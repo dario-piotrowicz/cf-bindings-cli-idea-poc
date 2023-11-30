@@ -21,8 +21,8 @@ importers:
         version: link:../../poc
     devDependencies:
       wrangler:
-        specifier: ^3.17.1
-        version: 3.17.1
+        specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
+        version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
 
   apps/nuxt:
     dependencies:
@@ -43,8 +43,8 @@ importers:
         specifier: ^4.2.5
         version: 4.2.5(vue@3.3.9)
       wrangler:
-        specifier: ^3.17.1
-        version: 3.17.1
+        specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
+        version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
 
   apps/qwik:
     dependencies:
@@ -92,8 +92,8 @@ importers:
         specifier: ^4.2.1
         version: 4.2.1(typescript@5.3.2)(vite@4.5.0)
       wrangler:
-        specifier: ^3.0.0
-        version: 3.17.1
+        specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
+        version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
 
   apps/remix:
     dependencies:
@@ -147,8 +147,8 @@ importers:
         specifier: ^5.0.2
         version: 5.0.2
       wrangler:
-        specifier: ^3.17.1
-        version: 3.17.1
+        specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
+        version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
 
   apps/solidstart:
     dependencies:
@@ -193,8 +193,8 @@ importers:
         specifier: ^4.4.9
         version: 4.5.0(@types/node@18.17.5)
       wrangler:
-        specifier: ^3.17.1
-        version: 3.17.1
+        specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
+        version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
 
   apps/sveltekit:
     dependencies:
@@ -227,14 +227,11 @@ importers:
         specifier: ^4.4.2
         version: 4.5.0(@types/node@18.17.5)
       wrangler:
-        specifier: ^3.17.1
-        version: 3.17.1
+        specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
+        version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
 
   poc:
     dependencies:
-      miniflare:
-        specifier: ^3.20231030.1
-        version: 3.20231030.1
       ts-node:
         specifier: ^10.9.1
         version: 10.9.1(@types/node@20.10.0)(typescript@5.3.2)
@@ -242,8 +239,8 @@ importers:
         specifier: ^5.1.6
         version: 5.3.2
       wrangler:
-        specifier: ^3.17.1
-        version: 3.17.1
+        specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
+        version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20231121.0
@@ -10036,28 +10033,6 @@ packages:
       - utf-8-validate
     dev: false
 
-  /miniflare@3.20231030.1:
-    resolution: {integrity: sha512-Y+EkgV/aFg/3Y/xfFtImK36sLZGXvNS45avVEz0cUCA2pGpg4hGdPu1Udmz5b06SyeUEFVf/dEDMJwdRYVEgLw==}
-    engines: {node: '>=16.13'}
-    hasBin: true
-    dependencies:
-      acorn: 8.11.2
-      acorn-walk: 8.3.0
-      capnp-ts: 0.7.0
-      exit-hook: 2.2.1
-      glob-to-regexp: 0.4.1
-      source-map-support: 0.5.21
-      stoppable: 1.1.0
-      undici: 5.28.1
-      workerd: 1.20231030.0
-      ws: 8.14.2
-      youch: 3.3.3
-      zod: 3.22.4
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
@@ -14565,32 +14540,6 @@ packages:
       regexparam: 2.0.1
     dev: true
 
-  /wrangler@3.17.1:
-    resolution: {integrity: sha512-Pr9+/tjFkthzG63uoVm1NtVvgokT6p92fy1UsOgrntHyTu0pZMC1VJzG0NC8Vhs+z/+yTT8AqVV6AiJb3w8ZOQ==}
-    engines: {node: '>=16.17.0'}
-    hasBin: true
-    dependencies:
-      '@cloudflare/kv-asset-handler': 0.2.0
-      '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
-      '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.17.19)
-      blake3-wasm: 2.1.5
-      chokidar: 3.5.3
-      esbuild: 0.17.19
-      miniflare: 3.20231030.1
-      nanoid: 3.3.7
-      path-to-regexp: 6.2.1
-      resolve.exports: 2.0.2
-      selfsigned: 2.4.1
-      source-map: 0.6.1
-      source-map-support: 0.5.21
-      xxhash-wasm: 1.0.2
-    optionalDependencies:
-      fsevents: 2.3.3
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
   /wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
     engines: {node: '>=10'}
@@ -14721,3 +14670,55 @@ packages:
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
+
+  '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-miniflare-4523':
+    resolution: {tarball: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-miniflare-4523}
+    name: miniflare
+    version: 0.0.0-11fd3bca
+    engines: {node: '>=16.13'}
+    hasBin: true
+    dependencies:
+      acorn: 8.11.2
+      acorn-walk: 8.3.0
+      capnp-ts: 0.7.0
+      exit-hook: 2.2.1
+      glob-to-regexp: 0.4.1
+      source-map-support: 0.5.21
+      stoppable: 1.1.0
+      undici: 5.28.1
+      workerd: 1.20231030.0
+      ws: 8.14.2
+      youch: 3.3.3
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523':
+    resolution: {tarball: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523}
+    name: wrangler
+    version: 0.0.0-11fd3bca
+    engines: {node: '>=16.17.0'}
+    hasBin: true
+    dependencies:
+      '@cloudflare/kv-asset-handler': 0.2.0
+      '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
+      '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.17.19)
+      blake3-wasm: 2.1.5
+      chokidar: 3.5.3
+      esbuild: 0.17.19
+      miniflare: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-miniflare-4523'
+      nanoid: 3.3.7
+      path-to-regexp: 6.2.1
+      resolve.exports: 2.0.2
+      selfsigned: 2.4.1
+      source-map: 0.6.1
+      source-map-support: 0.5.21
+      xxhash-wasm: 1.0.2
+    optionalDependencies:
+      fsevents: 2.3.3
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
