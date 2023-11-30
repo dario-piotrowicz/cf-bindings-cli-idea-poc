@@ -20,6 +20,9 @@ importers:
         specifier: workspace:*
         version: link:../../poc
     devDependencies:
+      '@cloudflare/workers-types':
+        specifier: 4.20231121.0
+        version: 4.20231121.0
       wrangler:
         specifier: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523
         version: '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523'
@@ -58,6 +61,9 @@ importers:
       '@builder.io/qwik-city':
         specifier: ^1.2.17
         version: 1.2.17(@types/node@20.10.0)
+      '@cloudflare/workers-types':
+        specifier: ^4.20231121.0
+        version: 4.20231121.0
       '@types/eslint':
         specifier: ^8.44.4
         version: 8.44.4
@@ -202,6 +208,9 @@ importers:
         specifier: workspace:*
         version: link:../../poc
     devDependencies:
+      '@cloudflare/workers-types':
+        specifier: ^4.20231121.0
+        version: 4.20231121.0
       '@sveltejs/adapter-auto':
         specifier: ^2.0.0
         version: 2.0.0(@sveltejs/kit@1.27.4)
@@ -14696,7 +14705,7 @@ packages:
       - utf-8-validate
 
   '@prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523':
-    resolution: {tarball: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523}
+    resolution: {registry: https://registry.npmjs.org/, tarball: https://prerelease-registry.devprod.cloudflare.dev/workers-sdk/runs/7035859586/npm-package-wrangler-4523}
     name: wrangler
     version: 0.0.0-11fd3bca
     engines: {node: '>=16.17.0'}

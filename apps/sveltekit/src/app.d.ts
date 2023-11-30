@@ -1,3 +1,5 @@
+/// <reference types="../worker-configuration.d.ts" />
+
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 declare global {

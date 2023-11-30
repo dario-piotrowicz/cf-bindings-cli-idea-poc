@@ -1,5 +1,8 @@
-name = "c3-worker-ta"
-main = "src/index.ts"
+name = "nuxt-app"
+# Note: `wrangler types` checks the existence of the entrypoint for some reason, I can't omit
+#        the main value below nor not having it point to an existing js/ts file,
+#        so let's just set it to something here
+main = "nuxt.config.ts"
 compatibility_date = "2023-11-21"
 
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)

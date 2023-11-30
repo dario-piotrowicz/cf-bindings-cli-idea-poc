@@ -1,4 +1,7 @@
-import type { KVNamespace } from '@cloudflare/workers-types';
+declare global {
+    interface Env {
+    }
+}
 
 export type RequestContext = {
     req: any,
@@ -6,7 +9,7 @@ export type RequestContext = {
     //       and get the types correctly inferred in dev mode (with a dev cli option?)
     //       otherwise this env object could be a Record<string, Binding> or something
     //       like that
-    env: { MY_KV: KVNamespace },
+    env: Env,
     ctx: any
 };
 
