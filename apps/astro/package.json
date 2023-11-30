@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "build": "poc build astro:build dist/_worker.js",
+    "poc_build": "poc build astro:build dist/_worker.js",
     "dev": "astro dev",
     "start": "astro dev",
     "astro:build": "astro check && astro build",

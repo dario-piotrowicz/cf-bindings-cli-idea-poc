@@ -1,7 +1,7 @@
 {
   "name": "solidstart",
   "scripts": {
-    "build": "poc build solid:build functions/[[path]].js",
+    "poc_build": "poc build solid:build functions/[[path]].js",
     "dev": "solid-start dev",
     "solid:build": "solid-start build",
     "start": "solid-start start",
