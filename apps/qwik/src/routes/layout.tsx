@@ -6,6 +6,19 @@ import Header from "~/components/starter/header/header";
 import Footer from "~/components/starter/footer/footer";
 
 import styles from "./styles.css?inline";
+import { getRequestContext } from "poc";
+
+export const useShowMyKvNumOfEntries = routeLoader$(async () => {
+	try {
+		const { env } = await getRequestContext();
+	
+		const numOfKeys = (await env.MY_KV.list()).keys.length;
+	
+		return `The number of keys in MY_KV is: ${numOfKeys}`;
+	} catch {
+		return 'ERROR: Could not access MY_KV!';
+	}
+});
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:

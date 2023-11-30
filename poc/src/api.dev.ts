@@ -4,17 +4,12 @@ export async function getRequestContext(): Promise<RequestContext> {
     const reqCtx = _getRequestContext();
 
     if(!reqCtx) {
-        const { Miniflare } = await import('miniflare');
-        const mf = new Miniflare({
-            modules: true,
-            script: '',
-            // the bindings should be read from a wrangler.toml file
-            kvNamespaces: ['MY_KV']
-        });
+        const { getBindingsProxy } = await import('wrangler');
+        const { bindings } = await getBindingsProxy();
     
         const newReqCtx: RequestContext = {
             req: null,
-            env: await mf.getBindings(),
+            env: bindings as any,
             ctx: null,
         };
 

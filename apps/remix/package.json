@@ -6,9 +6,9 @@
   "scripts": {
     "poc_build": "poc build build functions/[[path]].js",
     "vite:build": "vite build && vite build --ssr",
-    "vite:dev": "vite dev",
+    "dev": "vite dev",
     "build": "remix build",
-    "dev": "remix dev --manual -c \"npm run start\"",
+    "old_dev": "remix dev --manual -c \"npm run start\"",
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
     "typecheck": "tsc",
     "pages:preview": "wrangler pages dev ./public --kv MY_KV",

@@ -2,8 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import { getRequestContext } from 'poc';
 
-const { env } = await getRequestContext();
-const numOfKeys = (await env.MY_KV.list()).keys.length;
+const text = await getText();
+
+async function getText() {
+	try {
+		const { env } = await getRequestContext();
+	
+		const numOfKeys = (await env.MY_KV.list()).keys.length;
+	
+		return `The number of keys in MY_KV is: ${numOfKeys}`;
+	} catch {
+		return 'ERROR: Could not access MY_KV!';
+	}
+}
 
 ---
 
@@ -38,7 +49,7 @@ const numOfKeys = (await env.MY_KV.list()).keys.length;
 			</defs>
 		</svg>
 		<p class="instructions">
-      Number of keys is: {numOfKeys}
+			{text}
 		</p>
 	</main>
 </Layout>

@@ -10,19 +10,24 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = async () => {
-  const { env } = await getRequestContext();
-  const numOfKeys = (await env.MY_KV.list()).keys.length;
-
-  return json({ numOfKeys });
+	try {
+		const { env } = await getRequestContext();
+	
+		const numOfKeys = (await env.MY_KV.list()).keys.length;
+	
+		return `The number of keys in MY_KV is: ${numOfKeys}`;
+	} catch {
+		return 'ERROR: Could not access MY_KV!';
+	}
 };
 
 export default function Index() {
-  const { numOfKeys } = useLoaderData<typeof loader>();
+  const text = useLoaderData<typeof loader>();
   
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
-      <h2>numOfKeys = {numOfKeys}</h2>
+      <h2>{text}</h2>
     </div>
   );
 }
