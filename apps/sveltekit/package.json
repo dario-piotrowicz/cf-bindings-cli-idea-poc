@@ -10,7 +10,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-11-21 --proxy 5173 -- npm run dev",
-    "pages:preview": "wrangler pages dev .svelte-kit/cloudflare --kv MY_KV",
+    "pages:preview": "wrangler pages dev .svelte-kit/cloudflare",
     "pages:deploy": "npm run build && wrangler pages deploy .svelte-kit/cloudflare"
   },
   "devDependencies": {

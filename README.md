@@ -18,6 +18,11 @@ to build the application using the `poc` library run:
 pnpm poc_build
 ```
 
+and to then start it using wrangler:
+```
+pnpm pages:preview
+```
+
 ## Env Types
 
 Note that in every application you can see a `worker-configuration.d.ts` file, such files have been

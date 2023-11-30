@@ -9,11 +9,12 @@
     "sharp"
   ],
   "scripts": {
-    "poc_build": "poc build build.server dist/_worker.js",
+    "poc_build": "poc build build.pages dist/_worker.js",
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "build.server": "vite build -c adapters/cloudflare-pages/vite.config.ts",
+    "build.server": "rm -rf dist && vite build -c adapters/cloudflare-pages/vite.config.ts",
+    "build.pages": "rm -rf dist && pnpm build && pnpm build.server",
     "build.types": "tsc --incremental --noEmit",
     "deploy": "wrangler pages publish ./dist",
     "dev": "vite --mode ssr",
@@ -26,7 +27,7 @@
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-11-21 -- pnpm run dev",
-    "pages:preview": "wrangler pages dev ./dist --kv MY_KV",
+    "pages:preview": "wrangler pages dev ./dist",
     "pages:deploy": "pnpm run build && wrangler pages deploy ./dist"
   },
   "devDependencies": {
