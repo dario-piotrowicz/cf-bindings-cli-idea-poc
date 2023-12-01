@@ -6,7 +6,7 @@
     "solid:build": "solid-start build",
     "start": "solid-start start",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-11-21 --proxy 3000 -- npm run dev",
-    "pages:preview": "wrangler pages dev ./dist/public --kv MY_KV",
+    "pages:preview": "wrangler pages dev ./dist/public",
     "pages:deploy": "npm run build && wrangler pages deploy ./dist/public"
   },
   "type": "module",
